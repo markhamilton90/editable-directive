@@ -1,0 +1,10 @@
+
+<div ng-init="editable = false"
+	 ng-transclude
+	 contenteditable="{{ editable }}"
+	 ng-class="{ edit: editable }">	
+</div>
+<!-- when edit is clicked, editable becomes true and edit button disappears-->
+<button ng-click="editable = true" ng-show="!editable">Edit</button>
+<!-- when save is clicked, editable becomes false and save button disappears -->
+<button ng-click="editable = false" ng-show="editable">Save</button>
